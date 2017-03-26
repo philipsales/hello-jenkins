@@ -1,8 +1,13 @@
 #!/bin/sh
 
 ssh root@138.197.108.172 <<EOF
+  echo "change user"
   sudo su - pjsal
+
+  echo "cd hello-jenkins folder"
   cd ~/hello-jenkins
+
+  echo "git pull"
   git pull
   npm install --production
   forever restartall
