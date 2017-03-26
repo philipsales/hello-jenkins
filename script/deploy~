@@ -1,0 +1,10 @@
+#!/bin/sh
+
+ssh root@138.197.108.172 <<EOF
+  sudo su - pjsal
+  cd ~/hello-jenkins
+  git pull
+  npm install --production
+  forever restartall
+  exit
+EOF
