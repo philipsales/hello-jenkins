@@ -10,6 +10,6 @@ ssh -t -t root@138.197.108.172 <<EOF
   echo "git pull"
   git pull
   npm install --production
-  forever restartall
+  node app.js
   exit
 EOF
